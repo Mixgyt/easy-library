@@ -14,7 +14,9 @@ public class Parser <T>{
      * 
      * @param a Cadena que sera previamente convertida
      * @param t Tipo al que debera convertir
+     * @see unchecked Se ocultan las advertencias de parseo de los numeros
      */
+    @SuppressWarnings("unchecked")
     public Parser(String a, Tipos t){
         try{
             switch (t) {
@@ -32,7 +34,7 @@ public class Parser <T>{
                 }
             }
         }
-        catch(NumberFormatException e){
+        catch(Exception e){
             result = (T)(Number)0;
             status = e.getMessage();
             tryParse = false;
