@@ -160,4 +160,43 @@ public class Util {
         }
         return sum;
     }
+    
+    /**
+     * Metodo para calcular el factorial de un numero
+     * @param num {@code int}
+     * @return {@code Integer} {@code int}
+     */
+    public static Long Factor(int num){
+        long factor = 1;
+        if(num < 0){
+            factor *= -1;
+            num = Math.abs(num);
+        }
+        for(int i = 1; i <= num; i++){
+            factor *= i;
+        }
+        return factor;
+    }
+    
+    /**
+     * Funcion para redondear numeros a un numero de cifras significativas especificas
+     * @param num Numero {@code Double} a readondear
+     * @param decimals Numero de decimales a los que se redondearan
+     * @return 
+     */
+    public static Double Round(double num, int decimals){
+        double exp = Math.pow(10, decimals);
+        return Math.round((num*exp))/exp;
+    }
+    
+    /**
+     * Funcion para redondear numeros a un numero de cifras significativas especificas
+     * @param num Numero {@code Float} a readondear
+     * @param decimals Numero de decimales a los que se redondearan
+     * @return 
+     */
+    public static Double Round(float num, int decimals){
+        double exp = Math.pow(10, decimals);
+        return Math.round((num*exp))/exp;
+    }
 }

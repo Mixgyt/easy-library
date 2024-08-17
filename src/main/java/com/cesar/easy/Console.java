@@ -23,6 +23,14 @@ public class Console {
     }
     
     /**
+     * Metodo que imprime en consola sin imprimir un espacio de linea
+     * @param x Parametro que sera impreso por el metodo
+     */
+    public static void Write(Object x){
+        System.out.print(BackColor()+ForeColor()+x+ResetString);
+    }
+    
+    /**
      * Metodo que permite leer una linea de texto que el usuario escriba en consola
      * @return {@code String}
      */

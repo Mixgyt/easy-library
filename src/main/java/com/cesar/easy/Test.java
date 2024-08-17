@@ -7,23 +7,34 @@ package com.cesar.easy;
 public class Test {
 
     public static void main(String[] args) {
-        var a = Console.ReadLine();
-        
-        var parse = Util.ToInt(a);
-        if(parse.tryParse){
-            Console.WriteLine(parse.result);
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.BackgroundColor = ConsoleColor.Green;
+        Console.Write(Util.Round(100.5651382F,3)); 
+        Console.ResetColor();
+        Console.Write("a");
+        /*int[][] n = new int[3][3];
+        for(int i = 0; i < n.length; i++){
+            for(int j = 0; j < n[0].length; j++){
+             Console.WriteLine("Ingrese el numero de "+i+" , "+j);
+             while(true){
+                 var parser = Util.ToInt(Console.ReadLine());
+                 if(parser.tryParse){
+                     n[i][j] = parser.result;
+                     break;
+                 }
+                 Console.WriteLine("Error formato invalido\nVuelva a ingresar el numero");
+             }   
+            }
         }
         
-        int[] ar = new int[]{10,22,4,1,22};
-        Console.WriteLine(Util.Max(ar));
-        Console.BackgroundColor = ConsoleColor.Green;
-        Console.WriteLine(Util.Min(ar));
-        Console.ForegroundColor = ConsoleColor.Purple;
-        Console.WriteLine(Util.Min(ar));
-        Console.BackgroundColor = ConsoleColor.Red;
         Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine(Util.Min(ar)+"aaaaa");
-        Console.ResetColor();
-        Console.WriteLine(Util.Min(ar));
+        Console.BackgroundColor = ConsoleColor.Black;
+        for (int i = 0; i < n.length; i++) {
+            Console.Write("| ");
+            for (int j = 0; j < n[0].length; j++) {
+                Console.WriteLine(n[i][j]+" ");
+            }
+            Console.WriteLine("|");
+        }*/
     }
 }
