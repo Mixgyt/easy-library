@@ -37,7 +37,7 @@ public class Console {
     public static String ReadLine(){
         Scanner in = new Scanner(System.in);
         String entry = in.nextLine();
-        in.close();
+        //in.close();
         return entry;
     }
 
